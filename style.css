@@ -1,0 +1,110 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Body */
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    color: #333;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  /* Títulos */
+  h1, h2 {
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  /* Formulário */
+  form {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 400px;
+    margin: 0 auto 30px auto;
+    box-shadow: 0 0 8px rgba(0,0,0,0.1);
+  }
+  
+  /* Inputs */
+  input, select {
+    width: 90%;
+    padding: 8px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+  }
+  
+  /* Botão */
+  button {
+    width: 90%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Links */
+  .link-container {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+  }
+  
+  .link-container a {
+    background-color: #0ea5e9;
+    color: white;
+    padding: 10px 18px;
+    border-radius: 6px;
+    text-decoration: none;
+  }
+  
+  .link-container a:hover {
+    background-color: #0369a1;
+  }
+  
+  /* Tabela */
+  table {
+    width: 95%;
+    max-width: 800px;
+    border-collapse: collapse;
+    margin: 20px auto 0 auto;
+    background-color: white;
+  }
+  
+  th, td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: left;
+  }
+  
+  th {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  tr:hover {
+    background-color: #f2f2f2;
+  }
+  
+  /* Mensagens */
+  #resProduto, #resFabricante {
+    margin-top: 15px;
+    font-weight: bold;
+  }
+  .hidden {
+    display: none;
+  }
+    
