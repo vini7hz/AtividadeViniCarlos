@@ -5,7 +5,6 @@ let resEntregas = document.getElementById('resEntregas')
 
 carregar.addEventListener('click', (e) => {
   e.preventDefault();
-
   fetch('http://localhost:8081/entrega')
     .then(resp => {
       if (resp.ok) {
@@ -17,15 +16,7 @@ carregar.addEventListener('click', (e) => {
     })
     .then(entregas => {
       if (!entregas) return
-
       corpo.innerHTML = ''
-
-      if (entregas.length === 0) {
-        corpo.innerHTML = `<tr><td colspan="7">Nenhuma entrega encontrada.</td></tr>`
-        tabela.classList.remove('hidden')
-        return;
-      }
-
       entregas.forEach(entrega => {
         let linha = document.createElement('tr')
 
@@ -37,10 +28,10 @@ carregar.addEventListener('click', (e) => {
           <td>${entrega.localidade || "—"}</td>
           <td>${entrega.uf || "—"}</td>
           <td>${entrega.nomeResponsavel || "—"}</td>
-        `;
+        `
 
         corpo.appendChild(linha)
-      });
+      })
 
       tabela.classList.remove('hidden')
     })

@@ -9,16 +9,6 @@ formProduto.addEventListener("submit", (e) => {
   let preco = parseFloat(document.getElementById("preco").value)
   let codEntrega = parseInt(document.getElementById("codEntrega").value)
 
-  if (
-    !nome ||
-    isNaN(quantidade) ||
-    isNaN(preco) ||
-    isNaN(codEntrega)
-  ) {
-    alert("Por favor, preencha todos os campos obrigatórios corretamente.")
-    return
-  }
-
   let total = quantidade * preco
 
   let produto = {

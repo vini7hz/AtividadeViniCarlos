@@ -42,8 +42,8 @@ cep.addEventListener("click", () => {
     .then(res => res.json())
     .then(data => {
       if (data.erro) {
-        alert("CEP não encontrado.")
-        return
+      alert("CEP não encontrado.")
+      return
       }
 
       logradouro.value = data.logradouro || ""
@@ -58,7 +58,6 @@ formEntrega.addEventListener("submit", (e) => {
   e.preventDefault()
 
   let id = idEntrega.value.trim()
-
   let entrega = {
     logradouro: logradouro.value.trim(),
     complemento: complemento.value.trim(),

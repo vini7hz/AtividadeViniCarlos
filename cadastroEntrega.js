@@ -44,17 +44,6 @@ carregarCep.addEventListener("click", (e) => {
 formFabricante.addEventListener("submit", (e) => {
   e.preventDefault()
 
-  if (
-    !logradouro.value.trim() ||
-    !bairro.value.trim() ||
-    !localidade.value.trim() ||
-    !uf.value.trim() ||
-    !nomeEntrega.value.trim()
-  ) {
-    alert("Por favor, preencha todos os campos obrigatórios.")
-    return
-  }
-
   let entrega = {
     logradouro: logradouro.value.trim(),
     complemento: complemento.value.trim(),

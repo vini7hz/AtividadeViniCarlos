@@ -16,15 +16,7 @@ carregar.addEventListener('click', (e) => {
     })
     .then(produtos => {
       if (!produtos) return
-
       corpo.innerHTML = ''
-
-      if (produtos.length === 0) {
-        corpo.innerHTML = `<tr><td colspan="5">Nenhum produto encontrado.</td></tr>`;
-        tabela.classList.remove('hidden')
-        return
-      }
-
       produtos.forEach(produto => {
         let linha = document.createElement('tr');
         let total = (produto.preco * produto.quantidade).toFixed(2);
