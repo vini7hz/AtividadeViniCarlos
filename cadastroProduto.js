@@ -30,7 +30,6 @@ formProduto.addEventListener("submit", (e) => {
   })
     .then(async (res) => {
       if (!res.ok) {
-        resProduto.innerHTML = `<p style="color:red;">Erro ao cadastrar produto. Status: ${res.status}<br>${textoErro}</p>`
         return null
       }
       return res.json()
@@ -42,5 +41,5 @@ formProduto.addEventListener("submit", (e) => {
     })
     .catch((error) => {
       resProduto.innerHTML = `<p style="color:red;">Erro ao cadastrar produto: ${error.message}</p>`
-    });
-});
+    })
+})

@@ -12,7 +12,6 @@ id.addEventListener("change", (e) => {
       codEntrega.value = d.entrega.codEntrega
       id.disabled = true
     })
-    .catch(() => res.innerHTML = `<p style="color:red;">Produto não encontrado</p>`)
 })
 
 form.addEventListener("submit", (e) => {
@@ -24,7 +23,7 @@ form.addEventListener("submit", (e) => {
     total: +quantidade.value * +preco.value,
     entrega: { codEntrega: +codEntrega.value }
   }
-
+  
   fetch(`http://localhost:8081/produto/${id.value}`, {
     method: "PUT",
     headers: { "Content-Type": "application/json" },

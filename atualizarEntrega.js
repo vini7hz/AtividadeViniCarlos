@@ -45,7 +45,6 @@ cep.addEventListener("click", () => {
       alert("CEP não encontrado.")
       return
       }
-
       logradouro.value = data.logradouro || ""
       bairro.value = data.bairro || ""
       localidade.value = data.localidade || ""

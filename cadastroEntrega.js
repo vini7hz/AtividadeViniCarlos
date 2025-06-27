@@ -16,7 +16,6 @@ carregarCep.addEventListener("click", (e) => {
     alert("CEP inválido.")
     return
   }
-
   fetch(`https://viacep.com.br/ws/${cepValor}/json/`)
     .then((res) => {
       if (!res.ok) {
